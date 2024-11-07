@@ -1,0 +1,97 @@
+site_name: Ruby Gems Guide
+repo_url: https://github.com/jcouball/ruby-gems-guide
+repo_name: Fix This Page
+site_description: Building Ruby Gems
+
+use_directory_urls: true
+
+extra:
+    config_override: false
+    doc_owner: James Couball
+    doc_owner_shortid: jcouball
+    doc_owner_email: jcouball@yahoo.com
+
+    slack_title: 'ruby'
+    slack_link: https://main-branch.slack.com/archives/C07NB6E1B7W
+
+extra_css:
+    - css/mermaid_local.css
+
+extra_javascript:
+    - js/mermaid.js
+    - js/mermaid_settings.js
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - markdown_include.include:
+          base_path: docs
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_div_format
+    - pymdownx.tabbed
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+    - toc:
+        permalink: true
+        toc_depth: 3
+
+plugins:
+    - search
+
+strict: true
+
+theme:
+    name: 'material'
+    palette:
+
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+            icon: material/brightness-auto
+            name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+            icon: material/brightness-4
+            name: Switch to system preference
+
+nav:
+  - Getting Started: index.md
+  - Integrating Development Tools: integrate-development-tools.md
+  - Development Tools:
+    - Bump: bump.md
+    - Bundler Audit: bundler-audit.md
+    - Bundler Build: bundler-build.md
+    - Coventional Commits: conventional-commits.md
+    - Create GitHub Release: create-github-release.md
+    - Cucumber: cucumber.md
+    - Minitest: minitest.md
+    - Rake: rake.md
+    - RSpec: rspec.md
+    - Rubocop: rubocop.md
+    - Turnip: turnip.md
+    - Yard: yard.md
+  - Style Guide: ruby-style-guide.md
